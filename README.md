@@ -52,3 +52,7 @@
         └───maven-compiler-plugin
             └───compile
                 └───default-compile
+
+## Images
+![Главный экран приложения](images/main_screen.png)
+![Редактор поста](images/editor_screen.png)
