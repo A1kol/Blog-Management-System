@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="sample.controller.EditorController"
+           style="-fx-background-color: #f0f2f5;">
+
+    <VBox spacing="20" alignment="TOP_CENTER" style="-fx-padding: 30; -fx-background-radius: 10; -fx-background-color: white; -fx-effect: dropshadow(two-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);">
+
+        <Label text="Edit Post" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #333333;"/>
+
+        <HBox spacing="15" alignment="CENTER_LEFT">
+            <VBox spacing="5" prefWidth="200">
+                <Label text="Title:" style="-fx-font-weight: bold; -fx-text-fill: #555555;"/>
+                <TextField fx:id="titleField" promptText="Enter title..." style="-fx-pref-height: 35; -fx-background-radius: 5; -fx-border-radius: 5;"/>
+            </VBox>
+            <VBox spacing="5" prefWidth="200">
+                <Label text="Category:" style="-fx-font-weight: bold; -fx-text-fill: #555555;"/>
+                <TextField fx:id="categoryField" promptText="Enter category..." style="-fx-pref-height: 35; -fx-background-radius: 5; -fx-border-radius: 5;"/>
+            </VBox>
+        </HBox>
+
+        <VBox spacing="5" alignment="TOP_LEFT">
+            <Label text="Content:" style="-fx-font-weight: bold; -fx-text-fill: #555555;"/>
+            <TextArea fx:id="contentField" promptText="Write your content..." prefHeight="220" style="-fx-font-size: 14px; -fx-background-radius: 5; -fx-border-radius: 5;"/>
+        </VBox>
+
+        <HBox spacing="15" alignment="CENTER_RIGHT">
+            <Button text="Cancel" onAction="#onCancel" style="-fx-pref-width: 90; -fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5;"/>
+            <Button text="Save" onAction="#onSave" style="-fx-pref-width: 90; -fx-background-color: #2ecc71; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5;"/>
+        </HBox>
+
+    </VBox>
+
+</StackPane>

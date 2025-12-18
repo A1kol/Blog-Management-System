@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.controller.MainController"
+            style="-fx-background-color: #f0f2f5;">
+
+    <left>
+        <VBox spacing="10" style="-fx-padding: 15;">
+            <TextField fx:id="searchField" promptText="Search posts..."
+                       style="-fx-pref-height: 35; -fx-background-radius: 5; -fx-border-radius: 5;"/>
+            <ListView fx:id="postList" prefWidth="250"
+                      style="-fx-background-radius: 5; -fx-border-radius: 5;"/>
+        </VBox>
+    </left>
+
+    <center>
+        <VBox spacing="15" style="-fx-padding: 20; -fx-background-color: white; -fx-background-radius: 10; -fx-effect: dropshadow(two-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);">
+            <HBox spacing="10">
+                <Label text="Title:" style="-fx-font-weight: bold; -fx-text-fill: #555555;" />
+                <Label fx:id="titleLabel" style="-fx-text-fill: #333333;" wrapText="true"/>
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Category:" style="-fx-font-weight: bold; -fx-text-fill: #555555;" />
+                <Label fx:id="categoryLabel" style="-fx-text-fill: #333333;" wrapText="true"/>
+            </HBox>
+            <VBox spacing="5">
+                <Label text="Content:" style="-fx-font-weight: bold; -fx-text-fill: #555555;"/>
+                <Label fx:id="contentLabel" style="-fx-text-fill: #333333;" wrapText="true"/>
+            </VBox>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox spacing="15" alignment="CENTER_RIGHT" style="-fx-padding: 15;">
+            <Button fx:id="saveButton" text="Save to TXT" onAction="#onSaveToFile"
+                    style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold;"/>
+            <Button fx:id="addButton" text="Add" onAction="#onAddPost"
+                    style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5; -fx-pref-width: 90;"/>
+            <Button fx:id="editButton" text="Edit" onAction="#onEditPost"
+                    style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5; -fx-pref-width: 90;"/>
+            <Button fx:id="deleteButton" text="Delete" onAction="#onDeletePost"
+                    style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5; -fx-pref-width: 90;"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>
